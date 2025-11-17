@@ -83,8 +83,8 @@ const EmailSection = () => {
 
         <div className="bg-[#061222] p-6 rounded-xl border border-[#123249]">
           <h6 className="text-lg font-semibold text-white mb-2">Direct Contact</h6>
-          <p className="text-gray-300">Email: your.email@example.com</p>
-          <p className="text-gray-300">Phone: +1 (555) 123-4567</p>
+          <p className="text-gray-300">Email: ronaldbob365@google.com</p>
+          <p className="text-gray-300">Phone: +234-704-588-9973</p>
         </div>
       </div>
 
