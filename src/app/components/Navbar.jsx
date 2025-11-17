@@ -15,6 +15,14 @@ const navLinks = [
     path: "#projects",
   },
   {
+    title: "Experience",
+    path: "#experience",
+  },
+  {
+    title: "Skills",
+    path: "#skills",
+  },
+  {
     title: "Contact",
     path: "#contact",
   },
@@ -24,26 +32,26 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+    <nav className="fixed mx-auto border-b border-[#2D5B75] top-0 left-0 right-0 z-50 bg-[#061222] bg-opacity-95 backdrop-blur-sm">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-[#447794] to-[#2D5B75] bg-clip-text text-transparent"
         >
-          LOGO
+          𝔹𝕠𝕓𝕓𝕪
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-[#447794] text-[#447794] hover:text-white hover:border-white hover:bg-[#447794] transition-all duration-300"
             >
               <Bars3Icon className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-[#447794] text-[#447794] hover:text-white hover:border-white hover:bg-[#447794] transition-all duration-300"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>

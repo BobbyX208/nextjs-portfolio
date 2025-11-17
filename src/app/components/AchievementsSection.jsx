@@ -32,32 +32,34 @@ const achievementsList = [
 
 const AchievementsSection = () => {
   return (
-    <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
+    <div className="py-16 px-6">
+      <div className="bg-[#061222] border border-[#2D5B75] rounded-2xl py-12 px-8 flex flex-col sm:flex-row items-center justify-between shadow-2xl">
         {achievementsList.map((achievement, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
+              className="flex flex-col items-center justify-center mx-4 my-6 sm:my-0 group"
             >
-              <h2 className="text-white text-4xl font-bold flex flex-row">
-                {achievement.prefix}
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
-                  className="text-white text-4xl font-bold"
-                  configs={(_, index) => {
-                    return {
-                      mass: 1,
-                      friction: 100,
-                      tensions: 140 * (index + 1),
-                    };
-                  }}
-                />
-                {achievement.postfix}
-              </h2>
-              <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+              <div className="bg-[#123249] p-4 rounded-full mb-4 group-hover:bg-[#2D5B75] transition-colors duration-300">
+                <h2 className="text-white text-3xl font-bold flex flex-row">
+                  {achievement.prefix}
+                  <AnimatedNumbers
+                    includeComma
+                    animateToNumber={parseInt(achievement.value)}
+                    locale="en-US"
+                    className="text-white text-3xl font-bold"
+                    configs={(_, index) => {
+                      return {
+                        mass: 1,
+                        friction: 100,
+                        tensions: 140 * (index + 1),
+                      };
+                    }}
+                  />
+                  {achievement.postfix}
+                </h2>
+              </div>
+              <p className="text-gray-300 text-lg font-medium">{achievement.metric}</p>
             </div>
           );
         })}
